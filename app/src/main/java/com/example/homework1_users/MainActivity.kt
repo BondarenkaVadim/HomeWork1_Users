@@ -22,23 +22,13 @@ class MainActivity : AppCompatActivity() {
             //val editTextName: EditText = findViewById(R.id.Name)
             val name = Name.text.toString()
             //val editTextSecondName: EditText = findViewById(R.id.SeconName)
-
-
-
-
-
-
-
-
         //    @@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity() {
-
             //val secondName = editTextSecondName.text.toString()
             val secondName = SecondName.text.toString() // проверить
             //val editTextAge: EditText = findViewById(R.id.Age)
             //val age = Integer.parseInt(editTextAge.text.toString())
             // var num: Int = editText.text.toString().toIntOrNull() ?: 0
             val age: Int = Age.text.toString().toIntOrNull() ?: 0
-
             if (checkName(name) && checSecondName(secondName) && checAge(age)) {
                 val person = User(name, secondName, age)
                 if (users.contains(person)) {
