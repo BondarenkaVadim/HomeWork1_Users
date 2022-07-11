@@ -32,16 +32,6 @@ class MainActivity : AppCompatActivity() {
             if (checkName(name) && checSecondName(secondName) && checAge(age)) {
                 val person = User(name, secondName, age)
                 if (users.contains(person)) {
-
-
-
-
-
-
-
-
-
-
                     Toast.makeText(this, "Такой элемент уже есть", Toast.LENGTH_SHORT).show()
                 } else {
                     users.add(person)
