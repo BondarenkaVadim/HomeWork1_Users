@@ -22,14 +22,6 @@ class MainActivity : AppCompatActivity() {
             //val editTextName: EditText = findViewById(R.id.Name)
             val name = Name.text.toString()
             //val editTextSecondName: EditText = findViewById(R.id.SeconName)
-
-
-
-
-
-
-
-
         //    @@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 
             //val secondName = editTextSecondName.text.toString()
