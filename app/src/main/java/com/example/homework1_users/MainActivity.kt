@@ -54,7 +54,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     fun checSecondName(secondName: String): Boolean {
         if (secondName == "") {
             Toast.makeText(this, "Second Name Null", Toast.LENGTH_SHORT).show()
@@ -64,7 +63,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     fun checAge(age: Int): Boolean {
         if (age == 0) {
             Toast.makeText(this, "Age Null", Toast.LENGTH_SHORT).show()
@@ -73,5 +71,4 @@ class MainActivity : AppCompatActivity() {
             return true
         }
     }
-
 }
