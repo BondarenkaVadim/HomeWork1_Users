@@ -11,6 +11,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.jar.Attributes
 import kotlin.concurrent.fixedRateTimer
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +23,6 @@ class MainActivity : AppCompatActivity() {
             //val editTextName: EditText = findViewById(R.id.Name)
             val name = Name.text.toString()
             //val editTextSecondName: EditText = findViewById(R.id.SeconName)
-        //    @@ -30,6 +32,7 @@ class MainActivity : AppCompatActivity() {
             //val secondName = editTextSecondName.text.toString()
             val secondName = SecondName.text.toString() // проверить
             //val editTextAge: EditText = findViewById(R.id.Age)
@@ -32,16 +32,6 @@ class MainActivity : AppCompatActivity() {
             if (checkName(name) && checSecondName(secondName) && checAge(age)) {
                 val person = User(name, secondName, age)
                 if (users.contains(person)) {
-
-
-
-
-
-
-
-
-
-
                     Toast.makeText(this, "Такой элемент уже есть", Toast.LENGTH_SHORT).show()
                 } else {
                     users.add(person)
@@ -53,29 +43,32 @@ class MainActivity : AppCompatActivity() {
                 textView.text = users.last().toString()
             }
         }
-        }
-        fun checkName(name: String): Boolean {
-            if (name == "") {
-                Toast.makeText(this, "Name Null", Toast.LENGTH_SHORT).show()
-                return false
-            } else {
-                return true
-            }
-        }
-        fun checSecondName(secondName: String): Boolean {
-            if (secondName == "") {
-                Toast.makeText(this, "Second Name Null", Toast.LENGTH_SHORT).show()
-                return false
-            } else {
-                return true
-            }
-        }
-        fun checAge(age: Int): Boolean {
-            if (age == 0) {
-                Toast.makeText(this, "Age Null", Toast.LENGTH_SHORT).show()
-                return false
-            } else {
-                return true
-            }
+    }
+
+    fun checkName(name: String): Boolean {
+        if (name == "") {
+            Toast.makeText(this, "Name Null", Toast.LENGTH_SHORT).show()
+            return false
+        } else {
+            return true
         }
     }
+
+    fun checSecondName(secondName: String): Boolean {
+        if (secondName == "") {
+            Toast.makeText(this, "Second Name Null", Toast.LENGTH_SHORT).show()
+            return false
+        } else {
+            return true
+        }
+    }
+
+    fun checAge(age: Int): Boolean {
+        if (age == 0) {
+            Toast.makeText(this, "Age Null", Toast.LENGTH_SHORT).show()
+            return false
+        } else {
+            return true
+        }
+    }
+}
